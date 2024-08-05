@@ -15,7 +15,7 @@ for page in range(1, pages + 1):
     articles = document.find_all(class_="product_pod")
     for article in articles:
         img = main_url + article.img["src"]
-        title = article.h3.string.strip()
+        title = article.img["alt"].strip()
         price = article.find(class_="price_color").string.strip()
         instock = article.find(class_="instock availability").text.strip()
 
